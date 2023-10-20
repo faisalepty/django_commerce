@@ -1,0 +1,256 @@
+{% extends 'base/index.html' %}
+{% load static %}
+
+
+
+{% block content %}
+{% include 'base/navbar.html' %}
+<div class="about" id="About">
+        
+    <h1>Web<span>About</span></h1>
+
+    <div class="about_main">
+        <div class="about_image">
+            <div class="about_small_image">
+                <img src="{% static 'image/red_shoes1.png' %}" onclick="functio(this)">
+                <img src="{% static 'image/red_shoes2.png' %}" onclick="functio(this)">
+                <img src="{% static 'image/red_shoes3.png' %}" onclick="functio(this)">
+                <img src="{% static 'image/red_shoes4.png' %}" onclick="functio(this)">
+            </div>
+
+            <div class="image_contaner">
+                <img src="{% static 'image/red_shoes1.png' %}" id="imagebox">
+            </div>
+
+        </div>
+
+        <div class="about_text">
+            <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical 
+                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at 
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a 
+                Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the 
+                undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" 
+                (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, 
+                very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes 
+                from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below 
+                for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also 
+                reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+            </p>
+        </div>
+
+    </div>
+
+    <a href="{% url 'products' %}" class="about_btn">Shop Now</a>
+
+    <script>
+        function functio(small){
+            var full = document.getElementById("imagebox")
+            full.src = small.src
+        }
+    </script>
+    
+</div>
+
+
+
+<!--Review-->
+
+<div class="review" id="Review">
+    <h1>Customer's<span>review</span></h1>
+    
+    <div class="review_box">
+        <div class="review_card">
+            <div class="card_top">
+                <div class="profile">
+
+                    <div class="profile_image">
+                        <img src="image/girl_dp1.jpg">
+                    </div>
+
+                    <div class="name">
+                        <strong>Ranidi Lochana</strong>
+
+                        <div class="like">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="comment">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                    architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                    repellat numquam atque dolores!
+                </p>
+            </div>
+        </div>   
+
+        <div class="review_card">
+            <div class="card_top">
+                <div class="profile">
+
+                    <div class="profile_image">
+                        <img src="image/man_dp1.jpg">
+                    </div>
+
+                    <div class="name">
+                        <strong>Sayuru Tharanga</strong>
+
+                        <div class="like">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="comment">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                    architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                    repellat numquam atque dolores!
+                </p>
+            </div>
+        </div>   
+
+        <div class="review_card">
+            <div class="card_top">
+                <div class="profile">
+
+                    <div class="profile_image">
+                        <img src="image/man_dp2.jpg">
+                    </div>
+
+                    <div class="name">
+                        <strong>Senuda Dilwan</strong>
+
+                        <div class="like">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="comment">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                    architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                    repellat numquam atque dolores!
+                </p>
+            </div>
+        </div>   
+
+    </div>
+
+    <div class="review_box">
+        <div class="review_card">
+            <div class="card_top">
+                <div class="profile">
+
+                    <div class="profile_image">
+                        <img src="image/gir_dp3.jpg">
+                    </div>
+
+                    <div class="name">
+                        <strong>Kaveesha Vidurangi</strong>
+
+                        <div class="like">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="comment">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                    architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                    repellat numquam atque dolores!
+                </p>
+            </div>
+        </div>   
+
+        <div class="review_card">
+            <div class="card_top">
+                <div class="profile">
+
+                    <div class="profile_image">
+                        <img src="image/gir_dp2.jpg">
+                    </div>
+
+                    <div class="name">
+                        <strong>John Deo</strong>
+
+                        <div class="like">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="comment">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                    architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                    repellat numquam atque dolores!
+                </p>
+            </div>
+        </div>   
+
+        <div class="review_card">
+            <div class="card_top">
+                <div class="profile">
+
+                    <div class="profile_image">
+                        <img src="image/man_dp3.jpg">
+                    </div>
+
+                    <div class="name">
+                        <strong>Charith Aruna</strong>
+
+                        <div class="like">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="comment">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                    architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                    repellat numquam atque dolores!
+                </p>
+            </div>
+        </div>   
+
+    </div>
+
+</div>
+
+{% endblock content %}

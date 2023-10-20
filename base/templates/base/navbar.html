@@ -1,0 +1,27 @@
+{% load static %}
+
+
+
+<section>
+<nav>
+    <div class="logo">
+        <h1>Shoe<span>s</span></h1>
+    </div>
+
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'products' %}">Products</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+    </ul>
+
+    <div class="icons">
+        <img src="{% static 'image/ilove.png' %}" alt="">
+        <a href="{% url 'cart' request.user.id %}"><img src="{% static 'image/icart.PNG' %}" alt=""></a>
+        <a href="{% url 'logout' %}"><img src="{% static 'image/iavatar.png' %}" alt=""></a>
+       <p>Hello {{ request.user}}</p>
+       <a href="{% url 'logout' %}" style="margin-left: 10px;">Logout</a>
+    </div>
+
+</nav>
+
+</section>

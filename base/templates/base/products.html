@@ -1,0 +1,48 @@
+{% extends 'base/index.html' %}
+{% load static %}
+
+{% block content %}
+{% include 'base/navbar.html' %}
+<div class="products" id="Products">
+    <h1>Products</h1>
+    {% if message%}
+         <h3 style="text-align: center;">{{message}}</h3>
+         {% endif %}
+    <div class="box">
+        
+        {% for product in products %}
+
+
+        <div class="card">
+
+            <div class="small_card">
+                <img src="{% static 'image/ilove.png' %}" alt="">
+            </div>
+
+            <div class="image">
+                <img src="{{ product.pic.url }}">
+            </div>
+
+            <div class="products_text">
+                <h2>{{product.name}}</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+                <h3>${{product.price}}</h3>
+                <div class="products_star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <a href="{% url 'addtocart' request.user.id product.id%}" class="btn">Add To Cart</a>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+    
+    
+</div>
+{% endblock content %}
